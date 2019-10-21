@@ -9,7 +9,7 @@ namespace csharp_visa
     {
         
         static string rivi;
-        StreamReader r = new StreamReader("c:\\users\\saskator\\desktop\\csharpvisa1.txt");
+        StreamReader r = new StreamReader("C:\\Users\\marko\\Documents\\Academy\\Week 1\\Week1Project\\csharpvisa\\csharpvisa.txt");
         public Filut()
         {
         }

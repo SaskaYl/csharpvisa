@@ -117,7 +117,7 @@ namespace csharp_visa
 
         public static void KysyNimi()
         {
-            Console.WriteLine("Kirjoita nimesi");
+            Console.WriteLine("Moi! Kirjoita nimesi");
             nimi = Console.ReadLine();
             Console.WriteLine($"Hei, {nimi}!");
             Thread.Sleep(1500);
