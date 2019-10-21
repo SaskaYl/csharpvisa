@@ -32,7 +32,20 @@ namespace csharp_visa
         private static void PrinttaaPisteet()
         {
             Console.WriteLine();
-            Console.WriteLine($"Onneksi olkoon {nimi}, sait {score}/{sekolista.Count} pistettä!");
+
+            if (score < 3)
+            {
+                Console.WriteLine($"{nimi}, sait {score}/{sekolista.Count} pistettä!Aika heikko suoritus");
+            }
+            else if( score>=3&&score<7)
+            {
+                Console.WriteLine($"{nimi}, sait {score}/{sekolista.Count} pistettä!Ihan ok!");
+            }
+            else
+            {
+                Console.WriteLine($"Onneksi olkoon { nimi}, sait { score}/{ sekolista.Count} pistettä!");
+            }
+                
         }
 
         private static void KysyKäyttäjältä(List<Kysymys> kyssät)
@@ -48,8 +61,28 @@ namespace csharp_visa
                 for (int i = 0; i < kyssät.Count; i++)
                 {
                     Console.WriteLine();
-                    Console.WriteLine(kyssät[i].Kys); 
-                    if (Console.ReadLine().ToUpper().Equals(kyssät[i].Vast))
+                    Console.WriteLine(kyssät[i].Kys);
+                    var vastaus = Console.ReadLine().ToUpper();
+                        if (kyssät[i].Vast.Equals("K")&& vastaus.Equals("YES")|| kyssät[i].Vast.Equals("K") && vastaus.Equals("Y") )
+                        {
+                            vastaus = kyssät[i].Vast;
+                            Console.WriteLine("Hyvä, oikein meni!");
+                            Thread.Sleep(800);
+                            Console.Clear();
+
+                            score++;
+                        }
+                    else if (kyssät[i].Vast.Equals("E") && vastaus.Equals("NO") || kyssät[i].Vast.Equals("E") && vastaus.Equals("N"))
+                    {
+                        vastaus = kyssät[i].Vast;
+                        Console.WriteLine("Hyvä, oikein meni!");
+                        Thread.Sleep(800);
+                        Console.Clear();
+
+                        score++;
+                    }
+
+                    else if (vastaus.Equals(kyssät[i].Vast))
                     {
                         Console.WriteLine("Hyvä, oikein meni!");
                          Thread.Sleep(800);
@@ -57,7 +90,7 @@ namespace csharp_visa
                         
                         score++;
                     }
-                    else
+                    else 
                     {
                         Console.WriteLine("Vastasit väärin :(");
                         Thread.Sleep(800);
@@ -66,6 +99,7 @@ namespace csharp_visa
 
 
                     }
+                    
                 }
                 Console.WriteLine("Paina enter lopettaaksesi pelin.");
                  if (Console.ReadKey().Key!= ConsoleKey.Enter)
