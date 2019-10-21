@@ -1,0 +1,15 @@
+﻿Voiko C#-kielessä luoda monta Abstract-luokkaa?;K
+Voiko yhdessä luokassa olla monta konstruktoria?;K
+Onko olio ja luokan ilmentymä/instanssi sama asia?;K
+Onko rainbow sort yksi lajittelutapa?;E
+Palauttaako void metodi arvoja?;E
+Käyttääkö C# .NET-kirjastoa?;K
+Alkaako ohjelman suoritus aina main-metodista?;K
+Onko ulong short yksi C# tietotyypeistä?;K
+Onko stackalloc C# kielessä varattu sana?;K
+Voiko moniulotteisessa taulukossa olla rajattomasti ulottuvuuksia?;E
+Voidaanko tiedon kapselointi hoitaa helposti ominaisuuksilla(property)?;K
+Aloitetaanko debuggaus F5 painikkeella?;K
+Asetetaanko Toggle point F8 painikkeella?;E
+Onko HybridDictionary yksi erikoisluokista?;K
+Voidaanko C# kielessä käyttää ääkkösiä?;K
